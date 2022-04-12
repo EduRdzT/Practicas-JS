@@ -730,6 +730,57 @@ form [required]:invalid {
     opacity: 1;  
   }
 }
+/* 
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+SECCIÓN 15
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+*/
+
+#speech-btn {
+  font-weight: bolder;
+  width: 150px;
+  height: 50px;
+  border: 2px solid #000;
+  background: #fff;
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+#speech-btn::before, #speech-btn::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  z-index: -1;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+#speech-btn::before {
+  height: 50px;width: 130px;
+}
+#speech-btn::after {
+  width: 150px;height: 30px;
+}
+#speech-btn:hover::before {
+  width: 0px;
+}
+#speech-btn:hover::after {
+  height: 0px;
+}
 
 /* 
 ---------------------------------------------------------------------------------------

@@ -31,8 +31,19 @@ export default function speechReader() {
   
   d.addEventListener("click", e => {
     if(e.target === $speechBtn) {
+      if(e.path[1].querySelector("select").value === "") {
+        alert("Elige una voz");
+        return;
+      }
       speechMessage.text = $speechTextarea.value;
       speechSynthesis.speak(speechMessage);
     }
   });
+
+  d.addEventListener("focusin", e => {
+    if(e.target === $speechSelect) {
+      console.log(e.target[0])
+      e.target[0].disabled = true;
+    }
+  })
 }
