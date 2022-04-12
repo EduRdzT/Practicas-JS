@@ -1,5 +1,6 @@
 import active from "./js/active.js";
 import animationFormulario from "./js/animationFormulario.js";
+import calculadora from "./js/calculadora.js";
 import camaraweb from "./js/camaraweb.js";
 import slider from "./js/carrusel.js";
 import countdown from "./js/countdown.js";
@@ -74,6 +75,10 @@ d.addEventListener("keydown", e => {
 
 w.addEventListener("scroll", () => {
   inicio(scrollY || d.documentElement.scrollTop, ".inicio");
+})
+
+d.addEventListener("click", e => {
+  calculadora(e);
 })
 
 line("conexion");

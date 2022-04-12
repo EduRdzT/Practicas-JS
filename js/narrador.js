@@ -42,7 +42,6 @@ export default function speechReader() {
 
   d.addEventListener("focusin", e => {
     if(e.target === $speechSelect) {
-      console.log(e.target[0])
       e.target[0].disabled = true;
     }
   })
