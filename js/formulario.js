@@ -1,9 +1,8 @@
-const d = document;
+const d = document, w = window;
 
 export default function formulario(form) {
   const $form = d.getElementById(form);
   let ventana;
-  const page = {};
 
   $form.addEventListener("submit", (e) => {
     e.preventDefault();

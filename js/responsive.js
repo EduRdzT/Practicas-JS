@@ -5,7 +5,7 @@ export default function responsive(id, message, limit, url, apiFram) {
     if (e.matches) {
       document.getElementById(id).innerHTML = apiFram;
     } else {
-      document.getElementById(id).innerHTML = `<a href="${url}">${message}</a>`;
+      document.getElementById(id).innerHTML = `<a href="${url}" style="color:inherit">${message}</a>`;
     }
   }
   

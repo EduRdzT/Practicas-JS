@@ -345,13 +345,7 @@ SECCIÓN 4
 ---------------------------------------------------------------------------------------
 */
 
-#video {
-  margin: 10px 0;
-}
-
-#mapa {
-  margin: 10px 0;
-}
+#video, #mapa {margin: 10px 0;}
 
 /*
 ---------------------------------------------------------------------------------------
@@ -360,24 +354,62 @@ SECCIÓN 5
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
 */
-
-#formulario input[type=text],
-#formulario input[type=url] {
-  display: block;
-  caret-color: red;
-}
-
-.container-btn {
-  display: flex;
-}
-
-.container-btn button, 
 .container-btn input[type=submit] {
-  padding: 0 7px;
   cursor: pointer;
-  margin: 20px auto;
+  display: inline-block;
+  width: 48.7%;
+  background-color: var(--amarillo);
+  padding: 15px 7px;
+  margin: 15px auto;
+  border: 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
+.form-control {
+  position: relative;
+  margin: 20px 0;
+  width: 300px;
+}
+.form-control input {
+  caret-color: var(--amarillo);
+  background-color: inherit;
+  border: 0 !important;
+  border-bottom: 2px var(--amarillo) solid !important;
+  display: block;
+  width: 100%;
+  padding: 15px 7px;
+  font-size: 18px;
+  margin: auto;
+  color: inherit;
+}
+.form-control input:focus,  
+.form-control input:valid {  
+  outline: 0;
+}  
+.form-control label {  
+  position: absolute;  
+  top: calc(50% - (18px / 2));
+  left: 10px;  
+  pointer-events: none;
+}  
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}  
+.form-control input:focus + label span,
+.form-control input:not(:placeholder-shown) + label span {
+  transform: translateY(-28px);
+  -webkit-transform: translateY(-28px);
+  -moz-transform: translateY(-28px);
+  -ms-transform: translateY(-28px);
+  -o-transform: translateY(-28px);
+}
 /*
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
@@ -404,6 +436,34 @@ SECCIÓN 10
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
 */
+.card-filter {
+  border:  none;
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  padding-left: 36px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+  background: url(./assets/lupa.png) no-repeat 10px/16px, white;
+  cursor: pointer;
+  transition-property: width, border-radius, box-shadow;
+  transition-duration: 300ms;
+  box-shadow: 0 0 0 2px var(--amarillo);
+}
+
+.card-filter:focus,
+.card-filter:not(:placeholder-shown) {
+  width: 200px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  outline: none;
+  cursor: auto;
+}
 
 .cards {
   display: grid;

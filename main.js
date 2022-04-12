@@ -1,4 +1,5 @@
 import active from "./js/active.js";
+import animationFormulario from "./js/animationFormulario.js";
 import camaraweb from "./js/camaraweb.js";
 import slider from "./js/carrusel.js";
 import countdown from "./js/countdown.js";
@@ -37,7 +38,7 @@ d.addEventListener("DOMContentLoaded", () => {
   menuNavBar();
   reloj();
   audio("../sound/alerta-sismica-cdmx.mp3", ".i-alarma", ".d-alarma");
-  countdown("countdown", "Junuary 01, 2023 00:00:00", "¡Feliz Año Nuevo!");
+  countdown("countdown", "January 01, 2023 00:00:00", "¡Feliz Año Nuevo!");
   theme("theme","dark-mode");
   responsive(
     "video",
@@ -63,6 +64,7 @@ d.addEventListener("DOMContentLoaded", () => {
   active();
   smartVideo();
   validaciones();
+  animationFormulario();
 });
 
 d.addEventListener("keydown", e => {
