@@ -21,6 +21,12 @@ export default function calculadora(e) {
       operacion.b.push(e.target.textContent);
     }
   } else if (e.target.matches(".operation")) {
+    if (isNaN(operacion.res)) {clear();}
+    if (operacion.a.length === 0) return;
+    if (operacion.b.length > 0) {
+      operacion.a = [...String(operaciones(operacion.a, operacion.b, operacion.op))]
+      operacion.b = [];
+    }
     display1.textContent = `${operacion.a.join("")} ${e.target.textContent}`;
     operacion.op = e.target.textContent;
     display2.textContent = "0";
