@@ -789,7 +789,8 @@ SECCIÓN 16
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
 */
-/* #display {
+
+#display {
   background-color: rgb(138, 138, 138);
   height: 100px;
   width: 100%;
@@ -832,7 +833,52 @@ SECCIÓN 16
 }
 .button:nth-child(19) {
   border-bottom-right-radius: 7px;
-} */
+}
+
+/* 
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+SECCIÓN 17
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+*/
+h3 {
+  font-style: 80px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: "Nerko One", cursive;
+}
+#board {
+  width: 60vw;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 100px;
+  margin-top: 40px;
+}
+.box {
+  height: 20vh;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#restart {
+  font-family: "Nerko One", cursive;
+  padding: 10px 20px;
+  background-color: var(--amarillo);
+  border: none;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  color: #111;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
 /* 
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
