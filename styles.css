@@ -911,6 +911,53 @@ SECCIÓN 18
 /* 
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
+SECCIÓN 18
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+*/
+.pw-container {
+  width: 400px;
+  background-color: rgb(39, 39, 39);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+.pw-header {
+  padding: 1rem;
+}
+.pw {
+  width: 100%;
+  height: 70px;
+  background-color: var(--gris);
+  color: wheat;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.pw-body {
+  padding: 0px 1rem 1rem;
+}
+.pw-control {
+  color: #eee;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+}
+.generate {
+  display: block;
+  background-color: #ecb602;
+  color: wheat;
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+/* 
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
 MEDIA QUERRY
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------

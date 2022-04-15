@@ -36,6 +36,7 @@
       <li><a class="btn" href="#seccion16">Calculadora</a></li>
       <li><a class="btn" href="#seccion17">Tic Tac Toe</a></li>
       <li><a class="btn" href="#seccion18">Color Random</a></li>
+      <li><a class="btn" href="#seccion19">Password Generator</a></li>
     </ul>
   </nav>
 
@@ -316,6 +317,40 @@
         <button class="genNewBtn" id="genNewBtn">
           Click For New
         </button>
+      </div>
+    </section>
+
+    <section id="seccion19" class="container">
+      <h2>Password Generator</h2>
+      <div class="pw-container">
+        <div class="pw-header">
+          <div class="pw"title="copy">
+            <span id="pw">Password Here</span>
+          </div>
+        </div>
+        <div class="pw-body">
+          <div class="pw-control">
+            <lable for="length">Password Length</lable>
+            <input type="number" id="length" value="10" min="8" max="30">
+          </div>
+          <div class="pw-control">
+            <lable for="upper">Contain Uppercase Letters</lable>
+            <input type="checkbox" id="upper" checked>
+          </div>
+          <div class="pw-control">
+            <lable for="lower">Contain Lowercase Letters</lable>
+            <input type="checkbox" id="lower">
+          </div>
+          <div class="pw-control">
+            <lable for="number">Contain Numbers</lable>
+            <input type="checkbox" id="number">
+          </div>
+          <div class="pw-control">
+            <lable for="symbol">Contain Symbol</lable>
+            <input type="checkbox" id="symbol">
+          </div>
+          <button class="generate" id="generate">Generate Password</button>
+        </div>
       </div>
     </section>
 

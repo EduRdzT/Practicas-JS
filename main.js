@@ -14,6 +14,7 @@ import { shortcuts, teclado } from "./js/keyup.js";
 import line from "./js/line.js";
 import speechReader from "./js/narrador.js";
 import menuNavBar from "./js/navBar.js";
+import passwordGenerator from "./js/passwordGenerator.js";
 import { audio, reloj } from "./js/reloj.js";
 import responsive from "./js/responsive.js";
 import sorteo from "./js/sorteo.js";
@@ -68,6 +69,7 @@ d.addEventListener("DOMContentLoaded", () => {
   smartVideo();
   validaciones();
   animationFormulario();
+  passwordGenerator();
 });
 
 d.addEventListener("keydown", e => {
