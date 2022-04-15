@@ -878,7 +878,36 @@ h3 {
   cursor: pointer;
   text-transform: uppercase;
 }
-
+/* 
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+SECCIÓN 18
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+*/
+.wrapper button {
+  background: none;
+  border: 3px solid #fff;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 2.25rem;
+  margin-top: 10px;
+  outline: none;
+  cursor: pointer;
+}
+.wrapper {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper span {
+  color: #fff;
+  font-size: 3.75rem;
+  text-transform: uppercase;
+}
 /* 
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------

@@ -3,6 +3,7 @@ import animationFormulario from "./js/animationFormulario.js";
 import calculadora from "./js/calculadora.js";
 import camaraweb from "./js/camaraweb.js";
 import slider from "./js/carrusel.js";
+import colorRandom from "./js/colorRandom.js";
 import countdown from "./js/countdown.js";
 import dispositivos from "./js/dispositivos.js";
 import searchFilters from "./js/filtro_busquedas.js";
@@ -80,6 +81,7 @@ w.addEventListener("scroll", () => {
 
 d.addEventListener("click", e => {
   calculadora(e);
+  colorRandom(e);
 })
 
 line("conexion");
