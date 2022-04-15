@@ -894,6 +894,8 @@ SECCIÓN 18
   margin-top: 10px;
   outline: none;
   cursor: pointer;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
 }
 .wrapper {
   width: 400px;
@@ -907,6 +909,8 @@ SECCIÓN 18
   color: #fff;
   font-size: 3.75rem;
   text-transform: uppercase;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
 }
 /* 
 ---------------------------------------------------------------------------------------
