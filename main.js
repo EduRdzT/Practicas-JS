@@ -9,6 +9,7 @@ import dispositivos from "./js/dispositivos.js";
 import searchFilters from "./js/filtro_busquedas.js";
 import formulario from "./js/formulario.js";
 import getGeolocation from "./js/geolocalizacion.js";
+import imgSlide from "./js/imgSlide.js";
 import inicio from "./js/inicio.js";
 import { shortcuts, teclado } from "./js/keyup.js";
 import line from "./js/line.js";
@@ -24,18 +25,18 @@ import validaciones from "./js/validaciones.js";
 import smartVideo from "./js/video_inteligente.js";
 
 const d = document,
-   w = window,
-   users = [
-    "JavaScript", 
+  w = window,
+  users = [
+    "JavaScript",
     "PHP",
     "JAVA",
     "C",
-    "Python", 
-    "Ruby", 
-    "Go", 
-    "Visual Basic", 
-    "Rust", 
-    "Perl" 
+    "Python",
+    "Ruby",
+    "Go",
+    "Visual Basic",
+    "Rust",
+    "Perl",
   ];
 
 d.addEventListener("DOMContentLoaded", () => {
@@ -43,7 +44,7 @@ d.addEventListener("DOMContentLoaded", () => {
   reloj();
   audio("../sound/alerta-sismica-cdmx.mp3", ".i-alarma", ".d-alarma");
   countdown("countdown", "January 01, 2023 00:00:00", "¡Feliz Año Nuevo!");
-  theme("theme","dark-mode");
+  theme("theme", "dark-mode");
   responsive(
     "video",
     "Link de Video",
@@ -70,21 +71,22 @@ d.addEventListener("DOMContentLoaded", () => {
   validaciones();
   animationFormulario();
   passwordGenerator();
+  imgSlide();
 });
 
-d.addEventListener("keydown", e => {
+d.addEventListener("keydown", (e) => {
   shortcuts(e);
   teclado(e, ".container-keyup", ".circulo");
-})
+});
 
 w.addEventListener("scroll", () => {
   inicio(scrollY || d.documentElement.scrollTop, ".inicio");
-})
+});
 
-d.addEventListener("click", e => {
+d.addEventListener("click", (e) => {
   calculadora(e);
   colorRandom(e);
-})
+});
 
 line("conexion");
 speechReader();

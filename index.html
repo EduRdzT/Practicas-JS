@@ -1,366 +1,422 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicios JAVASCRIPT</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- https://material.io/resources/icons/?style=outline -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
-  rel="stylesheet">
-</head>
-<body data-dark>
-  
-  <header class="header-container">
-    <h1>Ejercicios JAVASCRIPT</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios JAVASCRIPT</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-dark>
+    <header class="header-container">
+      <h1>Ejercicios JAVASCRIPT</h1>
+    </header>
 
-  <nav class="navbar">
-    <ul>
-      <li><a class="btn focus" href="#seccion1">Reloj Digital y Alarma Sonora</a></li>
-      <li><a class="btn" href="#seccion2">Eventos del Teclado</a></li>
-      <li><a class="btn" href="#seccion3">Cuenta Regresiva</a></li>
-      <li><a class="btn" href="#seccion4">Responsive with javascript</a></li>
-      <li><a class="btn" href="#seccion5">Responsive Tester</a></li>
-      <li><a class="btn" href="#seccion6">Detección de Dispositivos</a></li>
-      <li><a class="btn" href="#seccion7">Detección de Conexión</a></li>
-      <li><a class="btn" href="#seccion8">Detección de la camara web</a></li>
-      <li><a class="btn" href="#seccion9">Geolocalización</a></li>
-      <li><a class="btn" href="#seccion10">Filtros de Búsqueda</a></li>
-      <li><a class="btn" href="#seccion11">Sorteo Digital</a></li>
-      <li><a class="btn" href="#seccion12">Responsive Slider</a></li>
-      <li><a class="btn" href="#seccion13">Image Slider</a></li>
-      <li><a class="btn" href="#seccion14">Video Inteligente</a></li>
-      <li><a class="btn" href="#seccion15">Formulario de Contactos (Validaciones)</a></li>
-      <li><a class="btn" href="#seccion16">Narrador</a></li>
-      <li><a class="btn" href="#seccion17">Calculadora</a></li>
-      <li><a class="btn" href="#seccion18">Tic Tac Toe</a></li>
-      <li><a class="btn" href="#seccion19">Color Random</a></li>
-      <li><a class="btn" href="#seccion20">Password Generator</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a class="btn focus" href="#seccion1"
+            >Reloj Digital y Alarma Sonora</a
+          >
+        </li>
+        <li><a class="btn" href="#seccion2">Eventos del Teclado</a></li>
+        <li><a class="btn" href="#seccion3">Cuenta Regresiva</a></li>
+        <li><a class="btn" href="#seccion4">Responsive with javascript</a></li>
+        <li><a class="btn" href="#seccion5">Responsive Tester</a></li>
+        <li><a class="btn" href="#seccion6">Detección de Dispositivos</a></li>
+        <li><a class="btn" href="#seccion7">Detección de Conexión</a></li>
+        <li><a class="btn" href="#seccion8">Detección de la camara web</a></li>
+        <li><a class="btn" href="#seccion9">Geolocalización</a></li>
+        <li><a class="btn" href="#seccion10">Filtros de Búsqueda</a></li>
+        <li><a class="btn" href="#seccion11">Sorteo Digital</a></li>
+        <li><a class="btn" href="#seccion12">Responsive Slider</a></li>
+        <li><a class="btn" href="#seccion13">Image Slider</a></li>
+        <li><a class="btn" href="#seccion14">Video Inteligente</a></li>
+        <li>
+          <a class="btn" href="#seccion15"
+            >Formulario de Contactos (Validaciones)</a
+          >
+        </li>
+        <li><a class="btn" href="#seccion16">Narrador</a></li>
+        <li><a class="btn" href="#seccion17">Calculadora</a></li>
+        <li><a class="btn" href="#seccion18">Tic Tac Toe</a></li>
+        <li><a class="btn" href="#seccion19">Color Random</a></li>
+        <li><a class="btn" href="#seccion20">Password Generator</a></li>
+      </ul>
+    </nav>
 
-  <div class="menu-btn"><div class="menu-btn-burger"></div></div>
+    <div class="menu-btn"><div class="menu-btn-burger"></div></div>
 
-  <button href="#seccion1" class="inicio"></button>
+    <button href="#seccion1" class="inicio"></button>
 
-  <button id="theme">
-    <span class="material-icons-outlined"></span>
-  </button>
-  
-  <main>
-    <section id="seccion1" class="container">
-      <h2>Reloj Digital y Alarma Sonora</h2>
-      <h3 id="reloj"></h3>
-      <div id="btn-container">
-        <button class="i-reloj">Iniciar Reloj</button>
-        <button class="d-reloj">Detener Reloj</button>
-        <button class="i-alarma">Iniciar Alarma</button>
-        <button class="d-alarma">Detener Alarma</button>
-      </div>
-    </section>
-    
-    <section id="seccion2" class="container">
-      <h2>Eventos del Teclado</h2>
-      <div class="container-keyup"><div class="circulo"></div></div>
-    </section>
-    
-    <section id="seccion3" class="container">
-      <h2>Cuenta Regresiva</h2>
-      <h3 id="countdown"></h3>
-    </section>
-    
-    <section id="seccion4" class="container">
-      <h2>Responsive with javascript</h2>
-    
-      <div id="video"></div>
-      <div id="mapa"></div>
-      
-    </section>
-    
-    <section id="seccion5" class="container">
-      <h2>Responsive Tester</h2>
-      <form id="formulario">
-        <div class="form-control">
-          <input type="url" placeholder=" " name="url" required>
-          <label>URL</label>
+    <button id="theme">
+      <span class="material-icons-outlined"></span>
+    </button>
+
+    <main>
+      <section id="seccion1" class="container">
+        <h2>Reloj Digital y Alarma Sonora</h2>
+        <h3 id="reloj"></h3>
+        <div id="btn-container">
+          <button class="i-reloj">Iniciar Reloj</button>
+          <button class="d-reloj">Detener Reloj</button>
+          <button class="i-alarma">Iniciar Alarma</button>
+          <button class="d-alarma">Detener Alarma</button>
         </div>
-        <div class="form-control">
-          <input type="text" placeholder=" " name="ancho" required>
-          <label>Ancho</label>
-        </div>
-        <div class="form-control">
-          <input type="text" placeholder=" " name="alto"required>
-          <label>Alto</label>
-        </div>
-        <div class="container-btn">
-          <input type="submit" name="probar" value="Probar">
-          <input type="submit" name="cerrar" value="Cerrar">
-        </div>
-      </form>
-    </section>
-    
-    <section id="seccion6" class="container">
-      <h2>Detección de Dispositivos <br> (User Agent)</h2>
-      <div id="lista-dispositivos"></div>
-    </section>
-    
-    <section id="seccion7" class="container">
-      <h2>Detección de Conexión</h2>
-      <div id="conexion"></div>
-    </section>
-    
-    <section id="seccion8" class="container">
-      <h2>Detección de la cámara web</h2>
-      <video id="webcam" ></video>
-    </section>
-    
-    <section id="seccion9" class="container">
-      <h2>Geolocalización</h2>
-      <div id="geolocation"></div>
-    </section>
-    
-    <section id="seccion10" class="container">
-      <h2>Filtros de Búsqueda</h2>
-      <input type="search" placeholder="Buscar..." class="card-filter">
-    
-      <article class="cards">
-        <figure class="card">
-          <img src="https://placeimg.com/200/200/nature" alt="Nature">
-          <figcaption>Nature</figcaption>
-        </figure>
-        <figure class="card">
-          <img src="https://placeimg.com/200/200/any" alt="Any">
-          <figcaption>Any</figcaption>
-        </figure>
-        <figure class="card">
-            <img src="https://placeimg.com/200/200/tech" alt="Tech">
+      </section>
+
+      <section id="seccion2" class="container">
+        <h2>Eventos del Teclado</h2>
+        <div class="container-keyup"><div class="circulo"></div></div>
+      </section>
+
+      <section id="seccion3" class="container">
+        <h2>Cuenta Regresiva</h2>
+        <h3 id="countdown"></h3>
+      </section>
+
+      <section id="seccion4" class="container">
+        <h2>Responsive with javascript</h2>
+
+        <div id="video"></div>
+        <div id="mapa"></div>
+      </section>
+
+      <section id="seccion5" class="container">
+        <h2>Responsive Tester</h2>
+        <form id="formulario">
+          <div class="form-control">
+            <input type="url" placeholder=" " name="url" required />
+            <label>URL</label>
+          </div>
+          <div class="form-control">
+            <input type="text" placeholder=" " name="ancho" required />
+            <label>Ancho</label>
+          </div>
+          <div class="form-control">
+            <input type="text" placeholder=" " name="alto" required />
+            <label>Alto</label>
+          </div>
+          <div class="container-btn">
+            <input type="submit" name="probar" value="Probar" />
+            <input type="submit" name="cerrar" value="Cerrar" />
+          </div>
+        </form>
+      </section>
+
+      <section id="seccion6" class="container">
+        <h2>
+          Detección de Dispositivos <br />
+          (User Agent)
+        </h2>
+        <div id="lista-dispositivos"></div>
+      </section>
+
+      <section id="seccion7" class="container">
+        <h2>Detección de Conexión</h2>
+        <div id="conexion"></div>
+      </section>
+
+      <section id="seccion8" class="container">
+        <h2>Detección de la cámara web</h2>
+        <video id="webcam"></video>
+      </section>
+
+      <section id="seccion9" class="container">
+        <h2>Geolocalización</h2>
+        <div id="geolocation"></div>
+      </section>
+
+      <section id="seccion10" class="container">
+        <h2>Filtros de Búsqueda</h2>
+        <input type="search" placeholder="Buscar..." class="card-filter" />
+
+        <article class="cards">
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/nature" alt="Nature" />
+            <figcaption>Nature</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/any" alt="Any" />
+            <figcaption>Any</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/tech" alt="Tech" />
             <figcaption>Tech</figcaption>
-        </figure>
-        <figure class="card">
-            <img src="https://placeimg.com/200/200/animals" alt="Animals">
+          </figure>
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/animals" alt="Animals" />
             <figcaption>Animals</figcaption>
-        </figure>
-        <figure class="card">
-          <img src="https://placeimg.com/200/200/people" alt="People">
-          <figcaption>People</figcaption>
-        </figure>
-        <figure class="card">
-            <img src="https://placeimg.com/200/200/arch" alt="Architecture">
+          </figure>
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/people" alt="People" />
+            <figcaption>People</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="https://placeimg.com/200/200/arch" alt="Architecture" />
             <figcaption>Architecture</figcaption>
-        </figure>
-      </article>
-    </section>
-    
-    <section id="seccion11" class="container">
-      <h2>Sorteo Digital</h2>
-      <div id="list-lottery"></div>
-      <button id="btn-lottery">Obtener Ganador</button>
-    </section>
-    
-    <section id="seccion12" class="container">
-      <h2>Responsive Slider</h2>
-      <div class="slider">
-        <div class="slider-slides">
-          <div class="slider-slide active">
-            <img src="https://placeimg.com/400/400/animals" alt="animals">
-          </div>
-          <div class="slider-slide">
-            <h4>2</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quidem voluptate aperiam quasi animi,
-              ex earum iure tenetur ad corporis saepe exercitationem ab doloribus tempore consequuntur. Minus nostrum
-              blanditiis dolore.</p>
-          </div>
-          <div class="slider-slide">
-            <img src="https://placeimg.com/400/400/nature" alt="nature">
-          </div>
-          <div class="slider-slide">
-            <h4>4</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus perferendis totam enim quam vel veniam
-              impedit rem quod laboriosam, maxime illo asperiores, illum eius. Nam libero quas ipsum et esse.</p>
-          </div>
-        </div>
-        <div class="slider-btns">
-          <a class="prev" href="#">&laquo;</a>
-          <a class="next" href="#">&raquo;</a>
-        </div>
-      </div>
-    </section>
+          </figure>
+        </article>
+      </section>
 
-    <section id="seccion13" class="container">
-      <h2>Image Slider</h2>
-    </section>
-    
-    <section id="seccion14" class="container">
-      <h2>Video Inteligente</h2>
-      <video src="../assets/Computer.mp4" muted controls loop data-smart-video></video>
-    </section>
-    
-    <section id="seccion15" class="container">
-      <h2>Formulario de Contactos (Validaciones)</h2>
-      <form data-validaciones>
-        <legend>Envíanos tus comentarios</legend>
-        <label class="label">
-          <input 
-            type="text" 
-            name="nombre" 
-            placeholder=" " 
-            title="Nombre solo acepta letras y espacios en blanco"
-            pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" 
-            required
-          >
-          <p>Escribe tu nombre</p>
-        </label>
-        <label class="label">
-          <input 
-            type="email" 
-            name="email" 
-            placeholder=" " 
-            title="Email incorrecto" 
-            pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" 
-            required
-          >
-          <p>Escribe tu email</p>
-        </label>
-        <label class="label">
-          <input 
-            type="text" 
-            name="subject" 
-            placeholder=" " 
-            title="El asunto es requerido"
-            required
-          >
-          <p>Asunto a tratar</p>
-        </label>
-        <label class="label">
-          <textarea 
-            name="message" 
-            cols="50" 
-            rows="5" 
-            placeholder=" " 
-            title="Tu comentario no debe de exceder los 255 caracteres"
-            data-pattern="^.{1,255}$"
-            required
-          ></textarea>
-          <p>Escribe tus comentarios</p>
-        </label>
-        <div class="btn-form">
-          <input type="submit" name="enviar">
-        </div>
-        <div class="contact-form-loader none">
-          <img src="/assets/puff.svg" alt="Cargando">
-        </div>
-      </form>
-    </section>
-    
-    <section id="seccion16" class="container">
-      <h2>Narrador</h2>
-      <select id="speech-select">
-        <option value="">--- Elige una Voz ---</option>
-      </select>
-      <br>
-      <textarea id="speech-text" cols="50" rows="5" placeholder="Ingresa texto para leerlo"></textarea>
-      <br>
-      <button id="speech-btn">Leer Texto</button>
-    </section>
+      <section id="seccion11" class="container">
+        <h2>Sorteo Digital</h2>
+        <div id="list-lottery"></div>
+        <button id="btn-lottery">Obtener Ganador</button>
+      </section>
 
-    <section id="seccion17" class="container">
-      <h2>Calculadora</h2>
-      <div id="calculadora">
-        <div id="display">
-          <div class="display-1">0</div>
-          <div class="display-2">0</div>
-        </div>
-        <div id="all_button">
-          <div class="button all-clear">C</div>
-          <div class="button last-entity-clear">CE</div>
-          <div class="button operation">%</div>
-          <div class="button operation">/</div>
-          <div class="button number">7</div>
-          <div class="button number">8</div>
-          <div class="button number">9</div>
-          <div class="button operation">x</div>
-          <div class="button number">4</div>
-          <div class="button number">5</div>
-          <div class="button number">6</div>
-          <div class="button operation">-</div>
-          <div class="button number">1</div>
-          <div class="button number">2</div>
-          <div class="button number">3</div>
-          <div class="button operation">+</div>
-          <div class="button number btn-0">0</div>
-          <div class="button number dot">.</div>
-          <div class="button equal">=</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="seccion18" class="container">
-      <h2>Tic Tac Toe</h2>
-      <h3 id="heading">Play</h3>
-      <button id="restart">Restart</button>
-      <div id="board">
-        <div class="box" id="0"></div>
-        <div class="box" id="1"></div>
-        <div class="box" id="2"></div>
-        <div class="box" id="3"></div>
-        <div class="box" id="4"></div>
-        <div class="box" id="5"></div>
-        <div class="box" id="6"></div>
-        <div class="box" id="7"></div>
-        <div class="box" id="8"></div>
-      </div>
-    </section>
-
-    <section id="seccion19" class="container">
-      <h2>Color Random</h2>
-      <div class="wrapper">
-        <span class="colorCode" id="colorCode">
-          New Color
-        </span>
-        <button class="genNewBtn" id="genNewBtn">
-          Click For New
-        </button>
-      </div>
-    </section>
-
-    <section id="seccion20" class="container">
-      <h2>Password Generator</h2>
-      <div class="pw-container">
-        <div class="pw-header">
-          <div class="pw"title="copy">
-            <span id="pw">Password Here</span>
+      <section id="seccion12" class="container">
+        <h2>Responsive Slider</h2>
+        <div class="slider">
+          <div class="slider-slides">
+            <div class="slider-slide active">
+              <img src="https://placeimg.com/400/400/animals" alt="animals" />
+            </div>
+            <div class="slider-slide">
+              <h4>2</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias, quidem voluptate aperiam quasi animi, ex earum iure
+                tenetur ad corporis saepe exercitationem ab doloribus tempore
+                consequuntur. Minus nostrum blanditiis dolore.
+              </p>
+            </div>
+            <div class="slider-slide">
+              <img src="https://placeimg.com/400/400/nature" alt="nature" />
+            </div>
+            <div class="slider-slide">
+              <h4>4</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus perferendis totam enim quam vel veniam impedit rem
+                quod laboriosam, maxime illo asperiores, illum eius. Nam libero
+                quas ipsum et esse.
+              </p>
+            </div>
+          </div>
+          <div class="slider-btns">
+            <a class="prev" href="#">&laquo;</a>
+            <a class="next" href="#">&raquo;</a>
           </div>
         </div>
-        <div class="pw-body">
-          <div class="pw-control">
-            <lable for="length">Password Length</lable>
-            <input type="number" id="length" value="10" min="8" max="30">
+      </section>
+
+      <section id="seccion13" class="container">
+        <h2>Image Slider</h2>
+        <div class="carrusel">
+          <div class="slider-container">
+            <div class="slide">
+              <img src="https://placeimg.com/400/400/animals" alt="animals" />
+            </div>
+            <div class="slide">
+              <!-- <img src="https://placeimg.com/400/400/tech" alt="tech"> -->
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                asperiores cupiditate nesciunt, consequatur incidunt hic! Sunt,
+                nisi sequi unde voluptatum non commodi sed, soluta nostrum quo
+                nam rerum numquam laboriosam?
+              </p>
+            </div>
+            <div class="slide">
+              <img src="https://placeimg.com/400/400/people" alt="people" />
+            </div>
+            <div class="slide">
+              <img src="https://placeimg.com/400/400/arch" alt="arch" />
+            </div>
           </div>
-          <div class="pw-control">
-            <lable for="upper">Contain Uppercase Letters</lable>
-            <input type="checkbox" id="upper" checked>
+          <div class="btns-sliders">
+            <button class="btn-slide prev-1">&laquo;</button>
+            <button class="btn-slide next-1">&raquo;</button>
           </div>
-          <div class="pw-control">
-            <lable for="lower">Contain Lowercase Letters</lable>
-            <input type="checkbox" id="lower">
+          <div class="dots-container">
+            <span class="dots focus" data-slide="0"></span>
+            <span class="dots" data-slide="1"></span>
+            <span class="dots" data-slide="2"></span>
+            <span class="dots" data-slide="3"></span>
           </div>
-          <div class="pw-control">
-            <lable for="number">Contain Numbers</lable>
-            <input type="checkbox" id="number">
-          </div>
-          <div class="pw-control">
-            <lable for="symbol">Contain Symbol</lable>
-            <input type="checkbox" id="symbol">
-          </div>
-          <button class="generate" id="generate">Generate Password</button>
         </div>
-      </div>
-    </section>
+      </section>
 
-  </main>
+      <section id="seccion14" class="container">
+        <h2>Video Inteligente</h2>
+        <video
+          src="../assets/Computer.mp4"
+          muted
+          controls
+          loop
+          data-smart-video
+        ></video>
+      </section>
 
-  <script src="main.js" type="module"></script>
-</body>
+      <section id="seccion15" class="container">
+        <h2>Formulario de Contactos (Validaciones)</h2>
+        <form data-validaciones>
+          <legend>Envíanos tus comentarios</legend>
+          <label class="label">
+            <input
+              type="text"
+              name="nombre"
+              placeholder=" "
+              title="Nombre solo acepta letras y espacios en blanco"
+              pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+              required
+            />
+            <p>Escribe tu nombre</p>
+          </label>
+          <label class="label">
+            <input
+              type="email"
+              name="email"
+              placeholder=" "
+              title="Email incorrecto"
+              pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$"
+              required
+            />
+            <p>Escribe tu email</p>
+          </label>
+          <label class="label">
+            <input
+              type="text"
+              name="subject"
+              placeholder=" "
+              title="El asunto es requerido"
+              required
+            />
+            <p>Asunto a tratar</p>
+          </label>
+          <label class="label">
+            <textarea
+              name="message"
+              cols="50"
+              rows="5"
+              placeholder=" "
+              title="Tu comentario no debe de exceder los 255 caracteres"
+              data-pattern="^.{1,255}$"
+              required
+            ></textarea>
+            <p>Escribe tus comentarios</p>
+          </label>
+          <div class="btn-form">
+            <input type="submit" name="enviar" />
+          </div>
+          <div class="contact-form-loader none">
+            <img src="/assets/puff.svg" alt="Cargando" />
+          </div>
+        </form>
+      </section>
+
+      <section id="seccion16" class="container">
+        <h2>Narrador</h2>
+        <select id="speech-select">
+          <option value="">--- Elige una Voz ---</option>
+        </select>
+        <br />
+        <textarea
+          id="speech-text"
+          cols="50"
+          rows="5"
+          placeholder="Ingresa texto para leerlo"
+        ></textarea>
+        <br />
+        <button id="speech-btn">Leer Texto</button>
+      </section>
+
+      <section id="seccion17" class="container">
+        <h2>Calculadora</h2>
+        <div id="calculadora">
+          <div id="display">
+            <div class="display-1">0</div>
+            <div class="display-2">0</div>
+          </div>
+          <div id="all_button">
+            <div class="button all-clear">C</div>
+            <div class="button last-entity-clear">CE</div>
+            <div class="button operation">%</div>
+            <div class="button operation">/</div>
+            <div class="button number">7</div>
+            <div class="button number">8</div>
+            <div class="button number">9</div>
+            <div class="button operation">x</div>
+            <div class="button number">4</div>
+            <div class="button number">5</div>
+            <div class="button number">6</div>
+            <div class="button operation">-</div>
+            <div class="button number">1</div>
+            <div class="button number">2</div>
+            <div class="button number">3</div>
+            <div class="button operation">+</div>
+            <div class="button number btn-0">0</div>
+            <div class="button number dot">.</div>
+            <div class="button equal">=</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="seccion18" class="container">
+        <h2>Tic Tac Toe</h2>
+        <h3 id="heading">Play</h3>
+        <button id="restart">Restart</button>
+        <div id="board">
+          <div class="box" id="0"></div>
+          <div class="box" id="1"></div>
+          <div class="box" id="2"></div>
+          <div class="box" id="3"></div>
+          <div class="box" id="4"></div>
+          <div class="box" id="5"></div>
+          <div class="box" id="6"></div>
+          <div class="box" id="7"></div>
+          <div class="box" id="8"></div>
+        </div>
+      </section>
+
+      <section id="seccion19" class="container">
+        <h2>Color Random</h2>
+        <div class="wrapper">
+          <span class="colorCode" id="colorCode"> New Color </span>
+          <button class="genNewBtn" id="genNewBtn">Click For New</button>
+        </div>
+      </section>
+
+      <section id="seccion20" class="container">
+        <h2>Password Generator</h2>
+        <div class="pw-container">
+          <div class="pw-header">
+            <div class="pw" title="copy">
+              <span id="pw">Password Here</span>
+            </div>
+          </div>
+          <div class="pw-body">
+            <div class="pw-control">
+              <lable for="length">Password Length</lable>
+              <input type="number" id="length" value="10" min="8" max="30" />
+            </div>
+            <div class="pw-control">
+              <lable for="upper">Contain Uppercase Letters</lable>
+              <input type="checkbox" id="upper" checked />
+            </div>
+            <div class="pw-control">
+              <lable for="lower">Contain Lowercase Letters</lable>
+              <input type="checkbox" id="lower" />
+            </div>
+            <div class="pw-control">
+              <lable for="number">Contain Numbers</lable>
+              <input type="checkbox" id="number" />
+            </div>
+            <div class="pw-control">
+              <lable for="symbol">Contain Symbol</lable>
+              <input type="checkbox" id="symbol" />
+            </div>
+            <button class="generate" id="generate">Generate Password</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
