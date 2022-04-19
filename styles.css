@@ -1,6 +1,7 @@
 :root {
   --amarillo: rgb(255, 194, 28);
   --gris: rgb(56, 56, 56);
+  --mobile-hero-app-row: 9fr;
 }
 
 *,
@@ -1049,20 +1050,211 @@ SECCIÓN 20
 /* 
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
-SECCIÓN 20
+SECCIÓN 21
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
 */
-/* #todo-list {
+.hero {
+  padding: 20px;
   display: grid;
-  grid-template-columns: 20px 280px;
-  row-gap: 0.7rem;
+  grid-template-columns: minmax(430px, 800px);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-content: center;
+}
+.todo-app {
+  display: grid;
+  grid-template-rows: 60px 1fr 45px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.todo-menu-1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr;
+  grid-template-columns: 50px 1fr;
+  -ms-grid-rows: 60px;
+  grid-template-rows: 60px;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.19);
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.19);
+  border-bottom: 1px solid #e6e6e6;
+}
+.add-todo-text-input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #e6e6e6;
+}
+::-webkit-input-placeholder {
+  color: #e6e6e6;
+  font-style: italic;
+}
+:-ms-input-placeholder {
+  color: #e6e6e6;
+  font-style: italic;
+}
+::-ms-input-placeholder {
+  color: #e6e6e6;
+  font-style: italic;
+}
+::placeholder {
+  color: #e6e6e6;
+  font-style: italic;
+}
+:-moz-placeholder,
+::-moz-placeholder {
+  opacity: 1;
+}
+.toggle-all,
+.delete-button,
+.delete-completed-button,
+.menu-2-button {
+  background: none;
+  border: none;
+  outline: none;
+}
+.toggle-all {
+  color: #e6e6e6;
+  -ms-grid-column-align: stretch;
+  justify-self: stretch;
+  text-align: center;
+}
+.toggle-all-checked {
+  color: #4d4d4d;
+}
+.rotate {
+  display: inline-block;
+  font-size: 20px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  /* Prevent rotate class from being clicked so that toggle-all button can be clicked instead. */
+  pointer-events: none;
+}
+.todo-menu-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 3fr 2fr;
+  grid-template-columns: 2fr 3fr 2fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  color: #777;
+  background: #f4f5f6;
+  font-size: 14px;
+  font-weight: 300;
+}
+.todo-menu-2 .todos-left {
+  -ms-grid-column-align: start;
+  justify-self: start;
+  padding-left: 20px;
+}
+.todo-menu-2 .todo-menu-2-buttons {
+  -ms-grid-column-align: center;
+  justify-self: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
+  grid-gap: 3px;
+}
+.todo-menu-2 .delete-completed-button,
+.todo-menu-2 .menu-2-button,
+.todo-menu-2 .todos-left {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.todo-menu-2 .menu-2-button {
+  padding: 2px 8px;
+  border: 1px solid rgba(137, 103, 208, 0);
+  border-radius: 3px;
+}
+.todo-menu-2 .menu-2-button:hover {
+  border: 1px solid rgba(137, 103, 208, 0.5);
+}
+.active {
+  border: 1px solid rgba(137, 103, 208, 1) !important;
+}
+.todo-menu-2 .delete-completed-button {
+  -ms-grid-column-align: end;
+  justify-self: end;
+  padding-right: 20px;
+}
+.todo-menu-2 .delete-completed-button:hover {
+  text-decoration: underline;
+}
+.todos {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: max-content;
+  list-style-type: none;
+  overflow: auto;
+}
+.todos .todo {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  border-bottom: 1px solid #ededed;
+  align-items: center;
+  overflow-wrap: break-word;
   word-wrap: break-word;
 }
-#todo-list p {
+/* checkbox centering */
+.todos .todo .pretty {
+  -ms-grid-column-align: center;
   justify-self: center;
-} */
+  -webkit-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
+  margin: 0;
+}
+.pretty .state label {
+  text-indent: 0;
+}
+.pretty .state i {
+  -webkit-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  color: #5dc2af;
+}
+.add-todo-text-input,
+.todo-text {
+  font-size: 24px;
+  color: #4d4d4d;
+}
+.todo-text {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.todo-text:focus {
+  outline: none;
+}
+.todo-checked-text {
+  color: #d9d9dd;
+  text-decoration: line-through;
+}
+.todo-checked-text:focus {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+.delete-button {
+  font-size: 28px;
+  color: #df8383;
+  justify-self: center;
+  visibility: hidden;
+}
+.todos .todo:hover .delete-button {
+  visibility: visible;
+}
+.delete-button:hover {
+  color: #f14a5d;
+  cursor: pointer;
+}
 /* 
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
