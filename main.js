@@ -21,8 +21,7 @@ import responsive from "./js/responsive.js";
 import sorteo from "./js/sorteo.js";
 import theme from "./js/theme.js";
 import gato from "./js/ticTacToe.js";
-import todolist from "./js/todolistjs.js";
-//import todo from "./js/toDoList.js";
+import todolist from "./js/todoList.js";
 import validaciones from "./js/validaciones.js";
 import smartVideo from "./js/video_inteligente.js";
 
@@ -74,7 +73,6 @@ d.addEventListener("DOMContentLoaded", () => {
   animationFormulario();
   passwordGenerator();
   imgSlide();
-  //todo();
 });
 
 d.addEventListener("keydown", (e) => {
