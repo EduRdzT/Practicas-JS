@@ -2,6 +2,7 @@ import active from "./js/active.js";
 import animationFormulario from "./js/animationFormulario.js";
 import calculadora from "./js/calculadora.js";
 import camaraweb from "./js/camaraweb.js";
+import card3D from "./js/card3D.js";
 import slider from "./js/carrusel.js";
 import colorRandom from "./js/colorRandom.js";
 import countdown from "./js/countdown.js";
@@ -25,6 +26,7 @@ import gato from "./js/ticTacToe.js";
 import todolist from "./js/todoList.js";
 import validaciones from "./js/validaciones.js";
 import smartVideo from "./js/video_inteligente.js";
+import weather from "./js/weatherAPI.js";
 
 const d = document,
   w = window,
@@ -74,6 +76,8 @@ d.addEventListener("DOMContentLoaded", () => {
   animationFormulario();
   passwordGenerator();
   imgSlide();
+  card3D(30);
+  weather();
 });
 
 d.addEventListener("keydown", (e) => {
