@@ -1405,7 +1405,7 @@ SECCIÓN 23
 }
 .card-3d {
   position: relative;
-  max-width: 400px;
+  width: 400px;
   height: 450px;
   margin: 5px;
   background-size: cover;
@@ -1436,7 +1436,27 @@ SECCIÓN 23
 .card-3d.noche {
   background: rgb(30, 43, 46);
 }
-.title {
+.animated-bg {
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 10%,
+    #f6f7f8 20%,
+    #f6f7f8 100%
+  );
+  background-size: 200% 100%;
+  animation: bgPos 1s linear infinite;
+}
+@keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -150% 0;
+  }
+}
+.card-3d h3 {
+  font-family: Arial, Helvetica, sans-serif;
   margin-top: 25px;
   transform: translateZ(50px);
   -webkit-transform: translateZ(50px);

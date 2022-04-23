@@ -40,23 +40,7 @@ export default function weather() {
         .get(url)
         .then((res) => {
           let horaActual = new Date(res.current.dt * 1000);
-          if (horaActual.getHours() >= 18) {
-            $card.classList.add("atardecer");
-          }
-          if (horaActual.getHours() <= 11) {
-            $card.classList.add("amanecer");
-          }
-          if (horaActual.getHours() >= 21 || horaActual.getHours() <= 5) {
-            $card.classList.add("noche");
-          }
-          if (horaActual.getHours() > 11 && horaActual.getHours() < 18) {
-            $card.classList.add("soleado");
-          }
-          if (res.current.weather[0].main === "Clouds" || "Rain") {
-            $card.classList.add("nublado");
-          }
 
-          $h3.classList.add("title");
           $h3.textContent = res.timezone.split("/")[1];
           $h4.classList.add("temp");
           $h4.textContent = parseInt(res.current.temp);
@@ -114,8 +98,26 @@ export default function weather() {
             $div.appendChild($pMax);
             $div.appendChild($pMin);
             $fragment.appendChild($div);
+
+            if (horaActual.getHours() >= 18) {
+              $card.classList.add("atardecer");
+            }
+            if (horaActual.getHours() <= 11) {
+              $card.classList.add("amanecer");
+            }
+            if (horaActual.getHours() >= 21 || horaActual.getHours() <= 5) {
+              $card.classList.add("noche");
+            }
+            if (horaActual.getHours() > 11 && horaActual.getHours() < 18) {
+              $card.classList.add("soleado");
+            }
+            if (
+              res.current.weather[0].main === "Clouds" ||
+              res.current.weather[0].main === "Rain"
+            ) {
+              $card.classList.add("nublado");
+            }
           }
-          //console.log(res);
         })
         .catch((err) => {
           let message = err.statusText || "Ocurrio un error";
@@ -123,15 +125,17 @@ export default function weather() {
           $h3.textContent = `Error ${status}: ${message}`;
           $fragment.appendChild($h3);
         })
-        .finally(() => $ubicacion.appendChild($fragment));
+        .finally(() => {
+          $ubicacion.appendChild($fragment);
+          $card.classList.remove("animated-bg");
+        });
     },
     function (err) {
       let message = err.message || "Ocurrio un error";
       let status = err.code || "400";
-      $ubicacion.insertAdjacentHTML(
-        "beforeend",
-        `<p><b>Error ${status}: ${message}</b></p>`
-      );
+      $h3.innerHTML = `<p><b>Error ${status}: ${message}</b></p>`;
+      $ubicacion.appendChild($h3);
+      $card.classList.remove("animated-bg");
     }
   );
 }
