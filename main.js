@@ -18,6 +18,7 @@ import speechReader from "./js/narrador.js";
 import menuNavBar from "./js/navBar.js";
 import passwordGenerator from "./js/passwordGenerator.js";
 import bar from "./js/progressBar.js";
+import range from "./js/rangeSlider.js";
 import { audio, reloj } from "./js/reloj.js";
 import responsive from "./js/responsive.js";
 import sorteo from "./js/sorteo.js";
@@ -78,6 +79,7 @@ d.addEventListener("DOMContentLoaded", () => {
   imgSlide();
   card3D(30);
   weather();
+  range();
 });
 
 d.addEventListener("keydown", (e) => {
